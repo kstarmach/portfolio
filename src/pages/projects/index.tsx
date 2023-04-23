@@ -15,49 +15,47 @@ type Project = {
 };
 
 function ProjectListItem(props: Project) {
-
+    const [isHovered, setIsHovered] = useState(false);
+    const formattedDate = new Date(props.createDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
 
     return (
-        <div className="mb-10">
-            <div>
-                <h3 className="text-2xl font-extrabold text-gray-900 mt-4">{props.title}</h3>
-                <p className="text-gray-500 text-sm">{props.createDate.toLocaleString()}</p>
-            </div>
-            <div className=" rounded-lg mt-4">
+        <Link href={`/projects/${props.id}`} passHref>
 
-                <Image
-                    src={props.imgUrl}
-                    alt="Example image from Picsum"
-                    width={600}
-                    height={400}
-                    className="rounded-lg w-full h-auto"
-                />
-                <div className=" rounded-lg  mx-4  px-6 py-4 flex justify-between w-full max-w-2xl">
-                    <button className="flex-1 rounded-full border bg-blue-500 text-white px-4 py-2 mr-2 hover:bg-blue-600 flex items-center justify-center">
-                        <FiPlay className="mr-2" />
-                        Demo &#8599;
-                    </button>
-                    <a
-                        href={props.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 rounded-full border border-gray-400 px-4 py-2 hover:bg-gray-100 flex items-center justify-center"
-                    >
-                        <FiGithub className="mr-2" />
-                        GitHub &#8599;
-                    </a>
+
+        <div
+            className="relative rounded-lg overflow-hidden cursor-pointer "
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className="my-10">
+                <div>
+                    <h3 className="text-2xl font-extrabold text-gray-900 ">{props.title}</h3>
+                    <p className="text-gray-500 text-sm mt-4">{formattedDate}</p>
                 </div>
+                <p className="mt-4 w-2xl text-xl text-gray-500">
+                    {props.shortContent}{' '}
+                    {/* <Link href={`/projects/${props.id}`} passHref>
+                        <span className={`text-gray-900  hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
+                            Read More →
+                        </span>
+                    </Link> */}
+                </p>
+                <div className=" mt-4 p-5">
+
+                    <Image
+                        src={props.imgUrl}
+                        alt="Example image from Picsum"
+                        width={600}
+                        height={400}
+                        className={`rounded-xl  w-full h-auto transition-all duration-500 ${isHovered ? 'transform scale-105' : ''
+                            }`}
+                    />
+                </div>
+
             </div>
-            <p className="mt-4 w-2xl text-xl text-gray-500">
-                {props.shortContent}{' '}
-                <Link href={`/projects/${props.id}`} passHref>
-                    <span className={`text-gray-900  hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
-                        Read More →
-                    </span>
-                </Link>
-            </p>
         </div>
+        </Link>
     )
 }
 
