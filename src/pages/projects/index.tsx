@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { FiGithub, FiPlay } from 'react-icons/fi';
 
 type Project = {
     id: string;
@@ -30,16 +29,11 @@ function ProjectListItem(props: Project) {
         >
             <div className="my-10">
                 <div>
-                    <h3 className="text-2xl font-extrabold text-gray-900 ">{props.title}</h3>
+                    <h3 className="text-xl font-extrabold text-gray-700 ">{props.title}</h3>
                     <p className="text-gray-500 text-sm mt-4">{formattedDate}</p>
                 </div>
                 <p className="mt-4 w-2xl text-xl text-gray-500">
                     {props.shortContent}{' '}
-                    {/* <Link href={`/projects/${props.id}`} passHref>
-                        <span className={`text-gray-900  hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
-                            Read More →
-                        </span>
-                    </Link> */}
                 </p>
                 <div className=" mt-4 p-5">
 

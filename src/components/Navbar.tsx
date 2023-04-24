@@ -19,16 +19,27 @@ const NavbarLink = ({ isActive, url, name }: NavbarLinkTypes) => {
 
 const Navbar = ({ active }: { active: string }) => {
 
+    if (active === 'Home' || active === 'About' || active === 'Projects') {
+        return (
+            <nav className="flex justify-between mt-4 max-w-2xl">
 
+                <div className="flex items-center space-x-10 text-gray-500 ">
+
+                    <NavbarLink isActive={active === 'Home'} url="/" name='Home' />
+                    <NavbarLink isActive={active === 'About'} url="/about" name='About' />
+                    <NavbarLink isActive={active === 'Projects'} url="/projects" name='Projects' />
+
+                </div>
+            </nav>
+        );
+    }
     return (
         <nav className="flex justify-between mt-4 max-w-2xl">
 
             <div className="flex items-center space-x-10 text-gray-500 ">
 
-                <NavbarLink isActive={active === 'Home'} url="/" name='Home' />
-                <NavbarLink isActive={active === 'About'} url="/about" name='About' />
-                <NavbarLink isActive={active === 'Projects'} url="/projects" name='Projects' />
-
+            <NavbarLink isActive={active === 'Projects'} url="/projects" name='&larr; Back' />
+ 
             </div>
         </nav>
     );
