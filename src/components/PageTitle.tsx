@@ -12,7 +12,7 @@ export default function PageTitle() {
 
     useEffect(() => {
         const fetchProject = async () => {
-            const res = await fetch(`http://localhost:3000/api/projects/${pid}`);
+            const res = await fetch(`/api/projects/${pid}`);
             const projectData = await res.json();
             setProject(projectData);
         };
