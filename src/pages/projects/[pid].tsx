@@ -2,7 +2,7 @@ import Image from "next/image"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from "react";
 import { FiGithub, FiPlay } from 'react-icons/fi';
-import { Project } from '../types'
+import { Project } from '../../types/types'
 
 
 export default function Project() {

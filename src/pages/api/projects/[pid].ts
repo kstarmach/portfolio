@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import projectsData from '../../data/projectsData'
-import { Project } from '@/pages/types';
+import projectsData from '../../../data/projectsData'
+import { Project } from '../../../types/types';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Project>) {

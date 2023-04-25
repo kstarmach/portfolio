@@ -1,6 +1,3 @@
-
-
-
 function DownloadButton() {
   const handleDownload = () => {
     const pdfUrl = '/Kamil_Starmach_Resume.pdf';
@@ -62,7 +59,7 @@ export default function Home() {
         Hi, I&apos;m Kamil. Self proclaimed <b>full stack developer</b> who tries to learn everything at once, in no particular order.
       </p>
 
-          <DownloadTable />
+      <DownloadTable />
     </>
   )
 }
