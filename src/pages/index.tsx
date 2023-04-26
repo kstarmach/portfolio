@@ -53,7 +53,13 @@ export default function Home() {
   return (
     <>
       <p className="my-4 w-2xl text-xl text-gray-500">
-        Hi, I&apos;m Kamil. Self proclaimed <b>full stack developer</b> who tries to learn everything at once, in no particular order.
+        Hi there! My name is Kamil, and I&apos;m a <b>Full Stack Web Developer</b> who loves to build websites of all kinds of styles.
+      </p>
+      <p className="my-4 w-2xl text-xl text-gray-500">
+        One of my biggest passions is <b>frontend development</b>, especially when it comes to building beautiful and accessible websites. I believe that great design should not come at <b>the expense of accessibility</b>, and I strive to create simple yet functional websites that are easy for all users to use.
+      </p>
+      <p className="my-4 w-2xl text-xl text-gray-500">
+        Whether you need a simple landing page, a powerful eCommerce platform, or something in between, I&apos;m here to help bring your vision to life.
       </p>
 
       <DownloadTable />
