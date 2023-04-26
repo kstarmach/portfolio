@@ -33,5 +33,8 @@ export default function PageTitle() {
                         : 'Projects'
                     : firstSegment;
 
-    return <h1 className="text-3xl font-extrabold text-gray-900">{title}</h1>
+    return <h1 className="text-3xl font-extrabold text-gray-900" tabIndex={0}>
+        {title}
+    </h1>
+
 }

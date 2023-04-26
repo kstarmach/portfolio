@@ -9,9 +9,10 @@ type NavbarLinkTypes = {
 
 const NavbarLink = ({ isActive, url, name }: NavbarLinkTypes) => {
     return (
-        <Link href={url}>
+        <Link href={url} passHref>
             <span className={`text-gray-900 ${isActive ? 'border-b-2 border-gray-900' : 'hover:border-b-2 hover:border-gray-900 hover:text-gray-900'}`}>
                 {name}
+                {isActive && <span className="sr-only">(current page)</span>}
             </span>
         </Link>
 
@@ -27,7 +28,7 @@ const Navbar = () => {
         return (
             <nav className="flex justify-between mt-4 max-w-2xl">
 
-                <div className="flex items-center space-x-10 text-gray-500 ">
+                <div className="flex items-center space-x-10  ">
 
                     <NavbarLink isActive={firstSegment === undefined} url="/" name='Home' />
                     <NavbarLink isActive={firstSegment === 'about'} url="/about" name='About' />
@@ -40,7 +41,7 @@ const Navbar = () => {
     return (
         <nav className="flex justify-between mt-4 max-w-2xl">
 
-            <div className="flex items-center space-x-10 text-gray-500 ">
+            <div className="flex items-center space-x-10  ">
 
                 <NavbarLink isActive={false} url="/projects" name='&larr; Back' />
 

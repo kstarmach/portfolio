@@ -1,8 +1,9 @@
 const Footer = () => {
     return (
-        <div className="bg-transparent text-center py-2 mt-20">
-            <span>&copy; 2023 Kamil Starmach</span>
-        </div>
+        <footer className="bg-transparent text-center py-2 mt-20">
+            <p>&copy; 2023 <span className="font-bold">Kamil Starmach</span></p>
+        </footer>
+
     );
 };
 

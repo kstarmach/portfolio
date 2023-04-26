@@ -20,8 +20,6 @@ function ProjectListItem(props: Project) {
 
     return (
         <Link href={`/projects/${props.id}`} passHref>
-
-
             <div
                 className="relative rounded-lg overflow-hidden cursor-pointer "
                 onMouseEnter={() => setIsHovered(true)}
@@ -29,12 +27,17 @@ function ProjectListItem(props: Project) {
             >
                 <div className="my-10">
                     <div>
-                        <h3 className="text-xl font-extrabold text-gray-700 ">{props.title}</h3>
-                        <p className="text-gray-500 text-sm mt-4">{formattedDate}</p>
+                        <h3 className="text-xl font-extrabold text-gray-700" tabIndex={0}>
+                            {props.title}
+                        </h3>
+                        <p className="text-gray-500 text-sm mt-4" aria-label="Date">
+                            {formattedDate}
+                        </p>
                     </div>
-                    <p className="mt-4 w-2xl text-xl text-gray-500">
-                        {props.shortContent}{' '}
+                    <p className="my-4 max-w-2xl text-lg sm:text-xl text-gray-800">
+                        {props.shortContent}
                     </p>
+
                     <div className=" mt-4 p-5">
 
                         <Image
@@ -60,11 +63,9 @@ export default function Projects() {
         const fetchProject = async () => {
             const res = await fetch(`/api/projects`);
             const projectData = await res.json();
-
-
             setProjectList(projectData);
-
         };
+
         fetchProject();
 
     }, []);
