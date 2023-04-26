@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Navbar from '@/components/Navbar'
 import PageTitle from '@/components/PageTitle';
+import Footer from '@/components/Footer';
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <PageTitle />
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </div >
   )
