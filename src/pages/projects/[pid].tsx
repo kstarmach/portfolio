@@ -33,10 +33,10 @@ export default function Project() {
             {project.technology.map((t, idx) =>
                 <TechnologyIcon technology={t} key={idx} />
             )}
-            <p className="my-4 max-w-2xl text-lg sm:text-xl text-gray-800">
+            <p className="my-4  text-lg sm:text-xl text-gray-800">
                 {project.content}
             </p>
-            <div className="rounded-lg mt-4">
+            <div className="rounded-lg my-8">
                 <Image
                     src={project.imgUrl}
                     alt={`Image of ${project.title}`}

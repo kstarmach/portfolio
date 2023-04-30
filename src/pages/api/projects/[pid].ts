@@ -6,12 +6,12 @@ import { Project } from '../../../types/types';
 export default function handler(req: NextApiRequest, res: NextApiResponse<Project>) {
     const { pid } = req.query;
     // Fetch data based on the pid parameter
-    const p = projectsData.find(p => p.id === pid);
-    if (!p) {
-        throw new Error('s')
-    }
-    const data: Project = p;
+    if (!pid) { return res.status(400) }
 
-    // Return the data as JSON
-    res.status(200).json(data);
+    const data = projectsData.find(p => p.id === pid)
+
+    if (data) {
+        return res.status(200).json(data);
+    }
+
 }

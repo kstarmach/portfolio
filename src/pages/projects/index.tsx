@@ -30,7 +30,7 @@ function ProjectListItem(props: Project) {
                             {formattedDate}
                         </p>
                     </div>
-                    <p className="my-4 max-w-2xl text-lg sm:text-xl text-gray-800">
+                    <p className="my-4 text-lg sm:text-xl text-gray-800">
                         {props.shortContent}
                     </p>
 
