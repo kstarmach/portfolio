@@ -1,79 +1,8 @@
+import TechnologyIcon from "@/components/TechnologyIcon";
 import Image from "next/image"
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { FaDatabase, FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaJsSquare } from 'react-icons/fa';
-import { SiDotnet, SiMongodb, SiTypescript, SiDocker, SiGraphql } from 'react-icons/si';
 
-const TechnologiesTable = () => {
-    return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Technology</th>
-                    <th>Icon</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>GraphQL</td>
-                    <td><SiGraphql /></td>
-                </tr>
-                <tr>
-                    <td>TypeScript</td>
-                    <td><SiTypescript /></td>
-                </tr>
-                <tr>
-                    <td>React Native</td>
-                    <td><FaReact /></td>
-                </tr>
-                <tr>
-                    <td>CI/CD</td>
-                    <td><SiDocker /></td>
-                </tr>
-                <tr>
-                    <td>Containers</td>
-                    <td><SiDocker /></td>
-                </tr>
-                <tr>
-                    <td>REST API</td>
-                    <td><FaJsSquare /></td>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td><FaHtml5 /></td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td><FaCss3Alt /></td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td><FaJsSquare /></td>
-                </tr>
-                <tr>
-                    <td>ASP.NET MVC</td>
-                    <td><SiDotnet /></td>
-                </tr>
-                <tr>
-                    <td>SQL Databases</td>
-                    <td><FaDatabase /></td>
-                </tr>
-                <tr>
-                    <td>MongoDB</td>
-                    <td><SiMongodb /></td>
-                </tr>
-                <tr>
-                    <td>Node.js</td>
-                    <td><FaNodeJs /></td>
-                </tr>
-                <tr>
-                    <td>ReactJS</td>
-                    <td><FaReact /></td>
-                </tr>
-            </tbody>
-        </table>
-    );
-};
 
 type Project = {
     id: string;
@@ -155,7 +84,11 @@ export default function Projects() {
     return (
         <>
             {projects}
-            <TechnologiesTable />
+            <TechnologyIcon technology="GraphQL" />
+            <TechnologyIcon technology="TypeScript" />
+            <TechnologyIcon technology="React Native" />
+            <TechnologyIcon technology="CI/CD" />
+            <TechnologyIcon technology="HTML" />
         </>
     )
 }
