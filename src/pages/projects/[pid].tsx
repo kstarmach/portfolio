@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FiGithub, FiPlay } from 'react-icons/fi';
 import { Project } from '../../types/types'
 import TechnologyIcon from "@/components/TechnologyIcon";
+import { TbArrowUpRight } from "react-icons/tb";
 
 
 export default function Project() {
@@ -64,7 +65,8 @@ export default function Project() {
                         aria-label="View source code on GitHub"
                     >
                         <FiGithub className="mr-2" />
-                        GitHub &#8599;
+                        GitHub
+                        <TbArrowUpRight className="w-5 h-5 ml-2" />
                     </a>
                 </div>
             </div>
