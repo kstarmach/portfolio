@@ -1,19 +1,8 @@
 import TechnologyIcon from "@/components/TechnologyIcon";
+import { Project } from "@/types/types";
 import Image from "next/image"
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
-
-type Project = {
-    id: string;
-    title: string;
-    content: string;
-    shortContent: string;
-    createDate: Date;
-    demoUrl: string;
-    githubUrl: string;
-    imgUrl: string;
-};
 
 function ProjectListItem(props: Project) {
     const [isHovered, setIsHovered] = useState(false);
@@ -29,9 +18,14 @@ function ProjectListItem(props: Project) {
             >
                 <div className="my-10">
                     <div>
-                        <h3 className="text-xl font-extrabold text-gray-700" tabIndex={0}>
+                        <h3 className="text-xl font-extrabold text-gray-700 my-2" tabIndex={0}>
                             {props.title}
+
                         </h3>
+                        {props.technology.map((t, idx) =>
+                            <TechnologyIcon technology={t} key={idx} />
+                        )}
+
                         <p className="text-gray-500 text-sm mt-4" aria-label="Date">
                             {formattedDate}
                         </p>
@@ -84,11 +78,6 @@ export default function Projects() {
     return (
         <>
             {projects}
-            <TechnologyIcon technology="GraphQL" />
-            <TechnologyIcon technology="TypeScript" />
-            <TechnologyIcon technology="React Native" />
-            <TechnologyIcon technology="CI/CD" />
-            <TechnologyIcon technology="HTML" />
         </>
     )
 }

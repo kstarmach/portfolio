@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from "react";
 import { FiGithub, FiPlay } from 'react-icons/fi';
 import { Project } from '../../types/types'
+import TechnologyIcon from "@/components/TechnologyIcon";
 
 
 export default function Project() {
@@ -28,7 +29,10 @@ export default function Project() {
     }
 
     return (
-        <div className="mb-10">
+        <div className="mb-10 mt-4">
+            {project.technology.map((t, idx) =>
+                <TechnologyIcon technology={t} key={idx} />
+            )}
             <p className="my-4 max-w-2xl text-lg sm:text-xl text-gray-800">
                 {project.content}
             </p>
@@ -43,14 +47,15 @@ export default function Project() {
                 <div
                     className="rounded-lg mx-4 px-6 py-4 flex justify-between w-full max-w-2xl"
                 >
-                    <button
-                        role="button"
+                    <a
+                        href={project.demoUrl}
+                        target="_blank"
                         aria-label="View demo"
                         className="flex-1 rounded-full border bg-blue-500 text-white px-4 py-2 mr-2 hover:bg-blue-600 flex items-center justify-center"
                     >
                         <FiPlay className="mr-2" />
                         Demo
-                    </button>
+                    </a>
                     <a
                         href={project.githubUrl}
                         target="_blank"
