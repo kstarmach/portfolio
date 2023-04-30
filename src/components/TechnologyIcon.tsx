@@ -50,7 +50,7 @@ function getIconByTechnology(technology: string) {
 export default function TechnologyIcon({ technology }: Props) {
     const icon = getIconByTechnology(technology);
 
-    return <span className="inline-flex m-1 items-center rounded-md bg-gray-50 px-2 py-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+    return <span className="inline-flex me-1 mt-1 items-center rounded-md bg-gray-50 px-2 py-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
         {icon}{technology}
     </span>;
 }
