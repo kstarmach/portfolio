@@ -29,14 +29,25 @@ export default function Project() {
         return <div>Loading...</div>;
     }
 
+    const paragraphs = project.content.split('\n\n');
+
     return (
         <div className="mb-10 mt-4">
             {project.technology.map((t, idx) =>
                 <TechnologyIcon technology={t} key={idx} />
             )}
-            <p className="my-4  text-lg sm:text-xl text-gray-800">
-                {project.content}
-            </p>
+
+            {paragraphs.map((p, idx) => (
+                <p key={idx} className="my-4  text-lg sm:text-xl text-gray-800">
+                    {p.split('*').map((text, i) => {
+                        if (i % 2 === 0) {
+                            return text;
+                        } else {
+                            return <b key={`${idx}-${i}`}>{text}</b>;
+                        }
+                    })}
+                </p>
+            ))}
             <div className="rounded-lg my-8">
                 <Image
                     src={project.imgUrl}

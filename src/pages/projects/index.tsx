@@ -49,6 +49,8 @@ function ProjectListItem(props: Project) {
                     </div>
 
                 </div>
+                <hr className="border-gray-300 my-8" />
+
             </div>
         </Link>
     )
