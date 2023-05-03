@@ -5,7 +5,7 @@ const projectsData: Project[] = [
         id: 'portfolio',
         title: 'Portfolio',
         technology: ['Next.JS', 'Vercel', 'Tailwind CSS', 'ReactJS', 'TypeScript'],
-        content: 'Portfolio project built with Next.js, React.js, TypeScript, and Tailwind CSS. Hosted on Vercel. The website showcases my skills, projects, and experiences through an easy-to-navigate interface with responsive design.',
+        content: 'Portfolio project built with *Next.js*, *React.js*, *TypeScript*, and *Tailwind CSS*. Hosted on *Vercel*. The website showcases my skills, projects, and experiences through an easy-to-navigate interface with responsive design.',
         shortContent: 'Personal portfolio website to test the Next.js and Tailwind CSS possibilities.',
         createDate: new Date('2023-04-20'),
         demoUrl: 'http://portfolio-kstarmach.vercel.app/',
