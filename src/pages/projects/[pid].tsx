@@ -51,6 +51,7 @@ export default function Project() {
             <div className="rounded-lg my-8">
                 <Image
                     src={project.imgUrl}
+                    priority={true}
                     alt={`Image of ${project.title}`}
                     width={600}
                     height={400}

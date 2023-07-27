@@ -40,6 +40,7 @@ function ProjectListItem(props: Project) {
 
                         <Image
                             src={props.imgUrl}
+                            priority={true}
                             alt="Example image from Picsum"
                             width={600}
                             height={400}
