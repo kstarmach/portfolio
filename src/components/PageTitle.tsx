@@ -1,7 +1,7 @@
 import { Project } from "@/types/types";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import Head from 'next/head';
 export default function PageTitle() {
     const [project, setProject] = useState<Project>();
     const router = useRouter();
@@ -33,8 +33,15 @@ export default function PageTitle() {
                         : 'Projects'
                     : firstSegment;
 
-    return <h1 className="text-3xl font-extrabold text-gray-900" tabIndex={0}>
-        {title}
-    </h1>
+    return (
+        <>
+            <Head>
+                <title>{title}</title>
+            </Head>
+            <h1 className="text-3xl font-extrabold text-gray-900" tabIndex={0}>
+                {title}
+            </h1>
+        </>
+    )
 
 }
