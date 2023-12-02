@@ -1,7 +1,7 @@
 import { JSXElementConstructor, ReactElement } from "react";
 import { FaDatabase, FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaJsSquare } from 'react-icons/fa';
-import { SiDotnet, SiMongodb, SiTypescript, SiDocker, SiGraphql, SiTailwindcss, SiMui } from 'react-icons/si';
-import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
+import { SiDotnet, SiMongodb, SiTypescript, SiDocker, SiGraphql, SiTailwindcss, SiMui, SiApollographql } from 'react-icons/si';
+import { TbBrandNextjs, TbBrandVercel, TbBrandVite } from "react-icons/tb";
 
 interface Props {
     technology: string;
@@ -11,6 +11,8 @@ function getIconByTechnology(technology: string) {
     switch (technology) {
         case "GraphQL":
             return <SiGraphql className="w-4 h-4 mr-1" />;
+        case "Apollo":
+            return <SiApollographql className="w-4 h-4 mr-1" />;
         case "TypeScript":
             return <SiTypescript className="w-4 h-4 mr-1" />;
         case "React Native":
@@ -42,6 +44,8 @@ function getIconByTechnology(technology: string) {
             return <SiTailwindcss className="w-4 h-4 mr-1" />;
         case "MUI":
             return <SiMui className="w-4 h-4 mr-1" />;
+        case "Vite":
+            return <TbBrandVite className="w-4 h-4 mr-1" />;
         default:
             return null;
     }
