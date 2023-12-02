@@ -2,6 +2,17 @@ import { Project } from "../types/types";
 
 const projectsData: Project[] = [
     {
+        id: 'anyaasi',
+        title: 'Anyaasi',
+        technology: ['Vite', 'Vercel', 'Tailwind CSS', 'ReactJS', 'GraphQL', 'Apollo'],
+        content: 'Anyaasi serves as a platform facilitating seamless connection with popular anime list websites such as *MyAnimeList* or *Anilist*.\n\n It enables users to effortlessly discover and download the latest episodes via torrent if they prefer higher quality over low bitrates in online players. The development of this website was driven by the desire to gain insights into *GraphQL* and proficiently manage multiple APIs.\n\n Additionally, it served as an opportunity to enhance comprehension of user credentialing and cookie storage.\n\n The entire application is crafted using *Vite* *React* and aesthetically styled with *Tailwind* *CSS*.',
+        shortContent: 'Anyaasi connects users to favorite anime list sites like MyAnimeList or Anilist, offering easy access to the latest episodes for torrent download.',
+        createDate: new Date('2023-12-02'),
+        demoUrl: 'https://anyaasi.vercel.app/',
+        githubUrl: 'https://github.com/kstarmach/anyaasi',
+        imgUrl: '/anyaasi-screenshot.jpeg',
+    },
+    {
         id: 'portfolio',
         title: 'Portfolio',
         technology: ['Next.JS', 'Vercel', 'Tailwind CSS', 'ReactJS', 'TypeScript'],
