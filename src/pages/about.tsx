@@ -20,11 +20,8 @@ export default function About() {
             <a href="https://github.com/kstarmach" target="_blank" rel="noopener noreferrer" title="Github calendar">
                 <ReactGithubCalendar
                     username="kstarmach"
-                    blockSize={25}
-                    blockMargin={5}
-                    hideColorLegend
-                    hideTotalCount
-                    hideMonthLabels
+                    colorScheme='light'          
+         
                 />
             </a>
             <p className="text-justify my-4  text-lg sm:text-xl text-gray-800 mt-10">
