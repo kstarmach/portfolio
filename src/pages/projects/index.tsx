@@ -36,7 +36,7 @@ function ProjectListItem(props: Project) {
                     <span className={`text-gray-900 border-b-2 border-gray-900' hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
                         <b>Read more &rarr;</b>
                     </span>
-                    <div className=" mt-4 p-5">
+                    <div className=" mt-4 sm:p-5">
 
                         <Image
                             src={props.imgUrl}

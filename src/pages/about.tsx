@@ -21,7 +21,6 @@ export default function About() {
                 <ReactGithubCalendar
                     username="kstarmach"
                     colorScheme='light'          
-         
                 />
             </a>
             <p className="text-justify my-4  text-lg sm:text-xl text-gray-800 mt-10">

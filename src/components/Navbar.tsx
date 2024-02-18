@@ -26,7 +26,7 @@ const Navbar = () => {
 
     if (!segments[1]) {
         return (
-            <nav className="flex justify-between mt-4 max-w-2xl">
+            <nav className="flex justify-between my-4 max-w-2xl">
 
                 <div className="flex items-center space-x-10  ">
 
@@ -39,7 +39,7 @@ const Navbar = () => {
         );
     }
     return (
-        <nav className="flex justify-between mt-4 max-w-2xl">
+        <nav className="flex justify-between my-4 max-w-2xl">
 
             <div className="flex items-center space-x-10  ">
 
