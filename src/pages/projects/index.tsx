@@ -33,7 +33,7 @@ function ProjectListItem(props: Project) {
                     <p className="my-4 text-lg sm:text-xl ">
                         {props.shortContent}
                     </p>
-                    <span className={` border-b-2 border-gray-900' hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
+                    <span className={` border-b-2 border-gray-900' hover:border-b-2 hover:border-gray-400 hover:text-gray-400`}>
                         <b>Read more &rarr;</b>
                     </span>
                     <div className=" mt-4 sm:p-5">

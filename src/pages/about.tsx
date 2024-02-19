@@ -3,16 +3,6 @@ import ReactGithubCalendar from 'react-github-calendar';
 import { useEffect, useState } from "react";
 
 export default function About() {
-    const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-    useEffect(() => {
-        let local_theme = localStorage.getItem('theme') as 'dark' | 'light' || 'light';
-        if (local_theme) {
-            setTheme(local_theme);
-        }
-    }, []);
-
-
     return (
         <>
             <p className="text-justify my-4  text-lg sm:text-xl ">
@@ -30,7 +20,7 @@ export default function About() {
             <a href="https://github.com/kstarmach" target="_blank" rel="noopener noreferrer" title="Github calendar">
                 <ReactGithubCalendar
                     username="kstarmach"
-                    colorScheme={theme}
+                    colorScheme={'dark'}
                 />
             </a>
             <p className="text-justify my-4  text-lg sm:text-xl  mt-10">

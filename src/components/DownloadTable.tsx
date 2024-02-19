@@ -7,7 +7,7 @@ function DownloadButton() {
     };
 
     return (
-        <button onClick={handleDownload} className="font-medium text-indigo-600 hover:text-indigo-500">Download</button>
+        <button onClick={handleDownload} className="font-medium text-indigo-300 hover:text-indigo-500">Download</button>
 
     );
 }

@@ -64,7 +64,7 @@ export default function Project() {
                         href={project.demoUrl}
                         target="_blank"
                         aria-label="View demo"
-                        className="flex-1 rounded-full border bg-blue-500 text-white px-4 py-2 mr-2 hover:bg-blue-600 flex items-center justify-center"
+                        className="flex-1 rounded-full border bg-blue-800 text-white px-4 py-2 mr-2 hover:bg-blue-600 flex items-center justify-center"
                     >
                         <FiPlay className="mr-2" />
                         Demo
