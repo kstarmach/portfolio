@@ -38,7 +38,7 @@ export default function Project() {
             )}
 
             {paragraphs.map((p, idx) => (
-                <p key={idx} className="my-4  text-lg sm:text-xl text-gray-800">
+                <p key={idx} className="my-4  text-lg sm:text-xl">
                     {p.split('*').map((text, i) => {
                         if (i % 2 === 0) {
                             return text;
@@ -73,7 +73,7 @@ export default function Project() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 rounded-full border border-gray-400 px-4 py-2 hover:bg-gray-100 flex items-center justify-center"
+                        className="flex-1 rounded-full border border-gray-400 px-4 py-2 hover:bg-gray-800 flex items-center justify-center"
                         aria-label="View source code on GitHub"
                     >
                         <FiGithub className="mr-2" />

@@ -18,7 +18,7 @@ function ProjectListItem(props: Project) {
             >
                 <div className="my-10">
                     <div>
-                        <h3 className="text-xl font-extrabold text-gray-700 my-2" tabIndex={0}>
+                        <h3 className="text-xl font-extrabold  my-2" tabIndex={0}>
                             {props.title}
 
                         </h3>
@@ -30,10 +30,10 @@ function ProjectListItem(props: Project) {
                             {formattedDate}
                         </p>
                     </div>
-                    <p className="my-4 text-lg sm:text-xl text-gray-800">
+                    <p className="my-4 text-lg sm:text-xl ">
                         {props.shortContent}
                     </p>
-                    <span className={`text-gray-900 border-b-2 border-gray-900' hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
+                    <span className={` border-b-2 border-gray-900' hover:border-b-2 hover:border-gray-900 hover:text-gray-900`}>
                         <b>Read more &rarr;</b>
                     </span>
                     <div className=" mt-4 sm:p-5">

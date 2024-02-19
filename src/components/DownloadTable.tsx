@@ -15,7 +15,7 @@ function DownloadButton() {
 export default function DownloadTable() {
     return (
         <div className="sm:px-4 pt-4  -cols-3 sm:gap-4 sm:px-0 ">
-            <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0 ">
+            <dd className="mt-2 text-sm  sm:col-span-2 sm:mt-0 ">
                 <ul role="list" className="divide-y divide-gray-100 rounded-md border border-gray-200">
                     <li className="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
                         <div className="flex w-0 flex-1 items-center">

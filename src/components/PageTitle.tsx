@@ -38,7 +38,7 @@ export default function PageTitle() {
             <Head>
                 <title>{title}</title>
             </Head>
-            <h1 className="text-3xl font-extrabold text-gray-900" tabIndex={0}>
+            <h1 className="text-3xl font-extrabold" tabIndex={0}>
                 {title}
             </h1>
         </>

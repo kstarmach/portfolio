@@ -10,7 +10,7 @@ type NavbarLinkTypes = {
 const NavbarLink = ({ isActive, url, name }: NavbarLinkTypes) => {
     return (
         <Link href={url} passHref>
-            <span className={`text-gray-900 ${isActive ? 'border-b-2 border-gray-900' : 'hover:border-b-2 hover:border-gray-900 hover:text-gray-900'}`}>
+            <span className={` ${isActive ? 'border-b-2 ' : 'hover:border-b-2 hover:border-gray-900 hover:text-gray-900'}`}>
                 {name}
                 {isActive && <span className="sr-only">(current page)</span>}
             </span>
