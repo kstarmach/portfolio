@@ -1,6 +1,5 @@
 import DownloadTable from '@/components/DownloadTable';
 import ReactGithubCalendar from 'react-github-calendar';
-import { useEffect, useState } from "react";
 
 export default function About() {
     return (
@@ -17,7 +16,7 @@ export default function About() {
             <p className="text-justify my-4 text-lg sm:text-xl  mb-10">
                 Along my journey, I&apos;ve learned many other techniques that have helped me become an even better developer. These include technologies like <i>GraphQL, TypeScript, React Native, CI/CD and Containers</i> as well as writing a master&apos;s thesis on <b>web accessibility</b> and the principles of creating websites to make them accessible. I am constantly looking for opportunities to learn more and expand my skills  in this constantly evolving web development career.
             </p>
-            <a href="https://github.com/kstarmach" target="_blank" rel="noopener noreferrer" title="Github calendar">
+            <a href="https://github.com/kstarmach" target="_blank" rel="noopener noreferrer" title="Github calendar" className='hidden md:block'>
                 <ReactGithubCalendar
                     username="kstarmach"
                     colorScheme={'dark'}
