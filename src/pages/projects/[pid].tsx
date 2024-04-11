@@ -84,7 +84,7 @@ export default function ProjectDetails() {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 rounded-full border border-gray-400 px-4 py-2 hover:bg-gray-800 flex items-center justify-center"
+                            className="flex-1 rounded-full border border-gray-400 px-4 py-2 hover:bg-gray-200 flex items-center justify-center"
                             aria-label="View source code on GitHub"
                         >
                             <FiGithub className="mr-2" />

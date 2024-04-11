@@ -1,47 +1,14 @@
-import { Project } from "@/types/types";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import Head from 'next/head';
-export default function PageTitle() {
-    const [project, setProject] = useState<Project>();
-    const router = useRouter();
-    const segments = router.asPath.split("/").filter(Boolean);
-    const firstSegment = segments[0];
+import { Suspense } from "react";
+import PageTitleSkeleton from "./skeletons";
+import Head from "next/head";
 
-    const pid = segments[1];
-
-    useEffect(() => {
-        const fetchProject = async () => {
-            const res = await fetch(`/api/projects/${pid}`);
-            const projectData = await res.json();
-            setProject(projectData);
-        };
-
-        if (pid) {
-            fetchProject();
-        }
-    }, [pid]);
-
-    let title =
-        firstSegment === undefined
-            ? 'Kamil Starmach'
-            : firstSegment === 'about'
-                ? 'About Me'
-                : firstSegment === 'projects'
-                    ? pid && project
-                        ? project.title
-                        : 'Projects'
-                    : firstSegment;
-
+export default function PageTitle({ title }: { title: string }) {
     return (
-        <>
-            <Head>
-                <title>{title}</title>
-            </Head>
+        <Suspense fallback={<PageTitleSkeleton />}>
+            <Head>{title}</Head>
             <h1 className="text-3xl font-extrabold" tabIndex={0}>
                 {title}
             </h1>
-        </>
+        </Suspense>
     )
-
 }

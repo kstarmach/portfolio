@@ -184,3 +184,9 @@ export function ProjectDetailsSkeleton() {
         </div>
     )
 }
+
+export default function PageTitleSkeleton() {
+    return (
+        <h3 className={`${shimmer} bg-gray-200 h-5 w-24`} />
+    )
+}

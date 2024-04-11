@@ -5,6 +5,12 @@ import { Project } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Projects',
+};
+
 
 function ProjectListItem({ project }: { project: Project }) {
     const [isHovered, setIsHovered] = useState(false);
@@ -21,7 +27,7 @@ function ProjectListItem({ project }: { project: Project }) {
             >
 
                 <h3 className="text-xl font-extrabold " tabIndex={0}>
-                    {project.title}
+                    {project.id}
                 </h3>
                 <div className="flex ">
                     {project.technology.map((t, idx) =>
