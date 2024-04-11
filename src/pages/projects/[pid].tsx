@@ -43,6 +43,7 @@ export default function ProjectDetails() {
 
     if (project)
         return (
+
             <div className="mb-10 mt-4">
                 {project.technology.map((t, idx) =>
                     <TechnologyIcon technology={t} key={idx} />
@@ -65,11 +66,11 @@ export default function ProjectDetails() {
                         priority={true}
                         alt={`Image of ${project.title}`}
                         width={600}
-                        height={384}
+                        height={600}
                         className="rounded-lg w-full h-auto"
                     />
                     <div
-                        className="rounded-lg mx-4 px-6 py-4 flex justify-between w-full max-w-2xl"
+                        className="rounded-lg mx-4 px-6 py-4 flex justify-center "
                     >
                         <a
                             href={project.demoUrl}
@@ -94,7 +95,6 @@ export default function ProjectDetails() {
                     </div>
                 </div>
             </div>
-
         )
 }
 

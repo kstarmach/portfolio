@@ -17,7 +17,7 @@ function ProjectListItem({ project }: { project: Project }) {
     const formattedDate = new Date(project.createDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
     return (
-        <>
+        <div>
             <Link
                 href={`/projects/${project.id}`}
                 passHref
@@ -55,12 +55,9 @@ function ProjectListItem({ project }: { project: Project }) {
                     height={384}
                     className={`rounded-xl w-full h-auto transition-all duration-500 ${isHovered ? 'transform scale-105' : ''}`}
                 />
-
-
-
             </Link>
 
-        </>
+        </div>
     );
 }
 

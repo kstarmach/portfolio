@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className='min-h-screen flex flex-col  text-gray-800 bg-gray-100 dark:text-white dark:bg-[#111010]'>
-      <div className=' mx-auto py-6 sm:py-16 px-4 sm:px-6 lg:px-8 sm:mt-20'>
+      <div className='max-w-4xl mx-auto py-6 sm:py-16 px-4 sm:px-6 lg:px-8 sm:mt-20'>
         <PageTitle title={getPageTitle()} />
         <Navbar />
         <Component {...pageProps} />

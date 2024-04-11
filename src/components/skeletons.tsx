@@ -160,7 +160,7 @@ export function ProjectDetailsSkeleton() {
             </div>
 
             <div
-                className="rounded-lg mx-4 px-6 py-4 flex justify-between w-full max-w-2xl"
+                className="rounded-lg mx-4 px-6 py-4 flex justify-center"
             >
                 <button
                     disabled
