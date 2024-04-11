@@ -50,7 +50,7 @@ function ProjectListItem({ project }: { project: Project }) {
                 <Image
                     src={project.imgUrl}
                     priority={true}
-                    alt="Example image from Picsum"
+                    alt="Image of project demo"
                     width={600}
                     height={384}
                     className={`rounded-xl w-full h-auto transition-all duration-500 ${isHovered ? 'transform scale-105' : ''}`}
